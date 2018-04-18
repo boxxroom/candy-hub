@@ -46,6 +46,16 @@ Route::group([
          * Catalogue manager routes
          */
         $router->group(['prefix' => 'catalogue-manager', 'namespace' => 'CatalogueManager'], function ($router) {
+
+            $router->get('attributes', [
+                'as' => 'hub.attributes.index',
+                'uses' => 'AttributeController@getIndex'
+            ]);
+            $router->get('attributes/{id}', [
+                'as' => 'hub.attributes.edit',
+                'uses' => 'AttributeController@getShow'
+            ]);
+
             $router->get('products', [
                 'as' => 'hub.products.index',
                 'uses' => 'ProductsController@getIndex'

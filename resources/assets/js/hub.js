@@ -136,6 +136,10 @@ CandyHelpers.install = function (Vue, options) {
   }
 };
 
+// Gradually move top level components into here, so we can use local registration per component.
+Vue.component('candy-attributes-table', require('./components/catalogue-manager/attributes/AttributesTable.vue'));
+Vue.component('candy-attribute-edit', require('./components/catalogue-manager/attributes/AttributeEdit.vue'));
+
 const app = new Vue({
     el: '#app',
     store,
