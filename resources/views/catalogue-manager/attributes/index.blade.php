@@ -5,9 +5,13 @@
 @endsection
 
 @section('header_title')
-    <small>Settings</small>
+    <small>Catalogue Manager</small>
     <h1>Attributes</h1>
 @endsection
+
+@section('header_actions')
+    <candy-attribute-create></candy-attribute-create>
+@stop
 
 @section('content')
     <candy-attributes-table></candy-attributes-table>

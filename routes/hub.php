@@ -56,6 +56,15 @@ Route::group([
                 'uses' => 'AttributeController@getShow'
             ]);
 
+            $router->get('attribute-groups', [
+                'as' => 'hub.attribute-groups.index',
+                'uses' => 'AttributeGroupController@getIndex'
+            ]);
+            $router->get('attribute-groups/{id}', [
+                'as' => 'hub.attribute-groups.edit',
+                'uses' => 'AttributeGroupController@getShow'
+            ]);
+
             $router->get('products', [
                 'as' => 'hub.products.index',
                 'uses' => 'ProductsController@getIndex'
@@ -64,6 +73,16 @@ Route::group([
                 'as' => 'hub.products.edit',
                 'uses' => 'ProductsController@getEdit'
             ]);
+
+            $router->get('product-families', [
+                'as' => 'hub.product-families.index',
+                'uses' => 'ProductFamilyController@getIndex'
+            ]);
+            $router->get('products-families/{id}', [
+                'as' => 'hub.product-families.edit',
+                'uses' => 'ProductFamilyController@getEdit'
+            ]);
+
             $router->get('collections', [
                 'as' => 'hub.collections.index',
                 'uses' => 'CollectionsController@getIndex'
