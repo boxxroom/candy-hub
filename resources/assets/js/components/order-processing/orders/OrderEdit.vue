@@ -194,7 +194,7 @@
                                                 <tr>
                                                     <td colspan="5"></td>
                                                     <td colspan="3" align="right"><strong>Sub total (Excl VAT)</strong></td>
-                                                    <td v-html="currencySymbol(order.total)"></td>
+                                                    <td v-html="currencySymbol(order.sub_total)"></td>
                                                 </tr>
                                                 <tr>
                                                     <td colspan="5"></td>
@@ -204,7 +204,7 @@
                                                 <tr>
                                                     <td colspan="5"></td>
                                                     <td colspan="3" align="right"><strong>Total</strong></td>
-                                                    <td v-html="currencySymbol(order.total + order.tax)"></td>
+                                                    <td v-html="currencySymbol(order.total)"></td>
                                                 </tr>
                                                 <tr v-if="order.vat_no && order.billing.country != 'United Kingdom'">
                                                     <td colspan="5"></td>
